@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+      --background: 30 2% 15%; /* Dark background (near black) */
+      --foreground: 0 0% 100%; /* White foreground text */
+  
+      --card: 30 2% 15%; /* Same as background for a unified look */
+      --card-foreground: 0 0% 100%; /* White text on cards */
+  
+      --popover: 30 2% 15%; /* Same as background */
+      --popover-foreground: 0 0% 100%; /* White text on popovers */
+  
+      --primary: 350 85% 60%; /* Bright red for primary elements */
+      --primary-foreground: 0 0% 100%; /* White text on primary elements */
+  
+      --secondary: 350 85% 60%; /* Bright red for secondary elements */
+      --secondary-foreground: 0 0% 100%; /* White text on secondary elements */
+  
+      --muted: 30 2% 20%; /* Slightly lighter gray for muted elements */
+      --muted-foreground: 0 0% 80%; /* Light gray text on muted elements */
+  
+      --accent: 350 85% 60%; /* Bright red for accents */
+      --accent-foreground: 0 0% 100%; /* White text on accents */
+  
+      --destructive: 350 85% 50%; /* Slightly darker red for destructive actions */
+      --destructive-foreground: 0 0% 100%; /* White text on destructive actions */
+  
+      --border: 0 0% 25%; /* Dark gray for borders */
+      --input: 30 2% 15%; /* Same as background for input fields */
+      --ring: 350 85% 60%; /* Red for focus rings */
+  
+      --radius: 0.5rem; /* Consistent border radius */
+    }
+  
+    .dark {
+      --background: 0 0% 10%; /* Darker background for dark mode */
+      --foreground: 0 0% 90%; /* Light gray text for dark mode */
+  
+      --card: 0 0% 10%; /* Dark background for cards in dark mode */
+      --card-foreground: 0 0% 90%; /* Light gray text on cards */
+  
+      --popover: 0 0% 10%; /* Dark background for popovers */
+      --popover-foreground: 0 0% 90%; /* Light gray text on popovers */
+  
+      --primary: 350 85% 60%; /* Bright red for primary elements */
+      --primary-foreground: 0 0% 100%; /* White text on primary elements */
+  
+      --secondary: 350 85% 60%; /* Bright red for secondary elements */
+      --secondary-foreground: 0 0% 100%; /* White text on secondary elements */
+  
+      --muted: 30 2% 20%; /* Slightly lighter gray for muted elements */
+      --muted-foreground: 0 0% 80%; /* Light gray text on muted elements */
+  
+      --accent: 350 85% 60%; /* Bright red for accents */
+      --accent-foreground: 0 0% 100%; /* White text on accents */
+  
+      --destructive: 350 85% 50%; /* Slightly darker red for destructive actions */
+      --destructive-foreground: 0 0% 100%; /* White text on destructive actions */
+  
+      --border: 0 0% 25%; /* Dark gray for borders */
+      --input: 0 0% 10%; /* Darker input background */
+      --ring: 350 85% 60%; /* Red for focus rings */
+    }
+  }
+  
