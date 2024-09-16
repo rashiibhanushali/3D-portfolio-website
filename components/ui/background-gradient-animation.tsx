@@ -51,17 +51,19 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  }, [gradientBackgroundStart, gradientBackgroundEnd, firstColor, secondColor, thirdColor, fourthColor, fifthColor, pointerColor, size, blendingValue]);
+  
 
   useEffect(() => {
     function move() {
       if (!interactiveRef.current) return;
-      setCurX(curX + (tgX - curX) / 20);
-      setCurY(curY + (tgY - curY) / 20);
+      setCurX(prevX => prevX + (tgX - prevX) / 20);
+      setCurY(prevY => prevY + (tgY - prevY) / 20);
       interactiveRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
     }
     move();
-  }, [tgX, tgY]);
+  }, [tgX, tgY]);  // curX and curY are no longer dependencies
+  
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
@@ -74,7 +76,8 @@ export const BackgroundGradientAnimation = ({
   const [isSafari, setIsSafari] = useState(false);
   useEffect(() => {
     setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
-  }, []);
+  }, []);  // This is fine as-is since it only runs once
+  
 
   return (
     <div
